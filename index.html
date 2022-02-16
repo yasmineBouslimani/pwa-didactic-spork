@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/universe.png"/>
 </head>
 <body>
-<p>Vamoooos !</p>
+<p>Vamooooooos !</p>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+            .then(function (registration) {
+                    console.log('service worker registred')
+                }
+            ).catch(function (err) {
+            console.log('service worker failed', err)
+        });
+    }
+</script>
+
 </body>
 </html>
